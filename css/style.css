@@ -1,125 +1,100 @@
-/* Box Model Hack */
-* {
-     box-sizing: border-box;
+body {
+  background-color: rgb(190, 8, 245);
+  text-align: center;
+}
+   
+#gameContainer {
+  width: 40vw;
+  height: 40vw;
+  margin: 1vw auto;
+  background-color: black;
+  border: solid 10px rgb(1, 121, 241);
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 3px black;
 }
 
-/* Clear fix hack */
-.clearfix:after {
-     content: ".";
-     display: block;
-     clear: both;
-     visibility: hidden;
-     line-height: 0;
-     height: 0;
+.gameBoardPixel {
+  height: 1vw;
+  border-radius: 10px;
+  float: left;
+  width: 1vw;
 }
-
-.clear {
-	clear: both;
+   
+.food {
+  background-color: #f80505;
+  box-shadow: 0 0 10px #fa8080;
 }
-
-/******************************************
-/*  */
-
-
-body{
-     background-color: darkviolet;
-     text-align: center;
+   
+.snakeBodyPixel {
+  background-color: #049a2c;
+  box-shadow: 0 0 5px #07d50b;
 }
-
-
-#gameboard{
-     width: 40vw;
-     height: 40vw;
-     background-color: rgb(70, 70, 70);
-     border: 7px solid darkturquoise;
-     border-radius: 7px;
-     box-shadow: 3px 3px 20px 3px ghostwhite;
-     margin: 2vh auto;
-}
-
-.gameboardPixel{
-     height: 1vw;
-     width: 1vw;
-     border-radius: 7px;
-     float: left;
-     outline: 1px solid red;
-}
-
-.food{
-     background-color: goldenrod;
-     box-shadow: 0px 0px 10px  gold;
-}
-
-.snakeBodyPixel{
-     background-color: whitesmoke;
-     box-shadow: 0px 0px 5px white;
-}
-
 #scoreContainer {
-     width:  40vw;
-     display: flex;
-     margin: auto;
-     justify-content: space-around;
+  width:  40vw;
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
 }
-   
 .scoreBoard {
-     font-family: 'Courier New', Courier, monospace;
-     font-weight: bold;
-     border-radius: 10px;
-     border: solid 5px rgb(1, 121, 241);
-     color: white;
-     background-color: black;
-     display: inline-block;
-     padding: 5px;
-     width: 40%;
-     box-shadow: 0px 0px 20px 3px black;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  border-radius: 10px;
+  border: solid 5px rgb(1, 121, 241);
+  color: white;
+  background-color: black;
+  display: inline-block;
+  padding: 5px;
+  width: 40%;
+  box-shadow: 0px 0px 20px 3px black;
 }
-   
+
 #onScreenControllers {
-     display: none;
+  display: none;
 }
-   
+
 @media only screen and (max-width: 786px) {
-     #gameContainer {
-       width: 80vw;
-       height: 80vw;
-     }
-   
-     .gameBoardPixel {
-       width: 2vw;
-       height: 2vw;
-     }
-   
-     #scoreContainer {
-       width: 80vw;
-     }
-   
-     #onScreenControllers {
-     width: 80vw;
-     margin: 5vw auto;
-     display: flex;
-     justify-content: space-evenly;
-     align-items: center;
-     }
-   
-     #onScreenControllers > div {
-       display: flex;
-       flex-direction: column;
-     }
-   
-     #onScreenControllers button {
-       background-color: transparent;
-       height: 20vw;
-       width: 20vw;
-       font-size: 10vw;
-       border: none;
-     }
-   
-     #onScreenControllers button:focus {
-       outline: none;
-     }
-   
-     #onScreenControllers button:active {
-       background-color: slategray;
-     }
+  #gameContainer {
+    width: 80vw;
+    height: 80vw;
+  }
+
+  .gameBoardPixel {
+    width: 2vw;
+    height: 2vw;
+  }
+
+  #scoreContainer {
+    width: 80vw;
+  }
+
+  #onScreenControllers {
+  width: 80vw;
+  margin: 5vw auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  }
+
+  #onScreenControllers > div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #onScreenControllers button {
+    background-color: transparent;
+    height: 20vw;
+    width: 20vw;
+    font-size: 10vw;
+    border: none;
+  }
+
+  #onScreenControllers button:focus {
+    outline: none;
+  }
+
+  #onScreenControllers button:active {
+    background-color: slategray;
+  }
 }
+   
+   
